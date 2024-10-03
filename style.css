@@ -1,0 +1,327 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap'); /*imported fonts*/
+
+
+html, body, div, span, applet, object, iframe, /*css reset*/
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}                                       /*end of reset*/
+
+:root{
+    --blue:#007d7b;
+    --black: #000000;
+    --white: #ffffff;
+    --font-family: "Arial", "Helvetica", sans-serif;
+}
+
+html{
+    font-family: var(--font-family);
+    border: solid var(--white) 10px;
+    background-color: var(--black);
+}
+
+header{
+    border: solid 10px var(--black);
+    border-top: none;
+}
+
+p{
+    font-size: 1.25em;
+}
+
+figcaption, label, input, small{
+    font-size: 1em;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+h1{
+    font-size: 3em;
+    color: var(--blue);
+    background-color: var(--white);
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 60px;
+    text-align: center;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav a{
+    font-size: 1.5em;
+    color: var(--white);
+    text-decoration: none;
+    padding-top: 5px;
+    display: block;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color: var(--blue);
+}
+
+main{
+    background-color: var(--white);
+    border: solid 25px var(--black);
+}
+
+h2{
+    font-size: 2em;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+p{
+    padding-left: 10px;
+}
+
+#about p:first-of-type{
+    padding-bottom: 30px;
+}
+
+#gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+
+figure figcaption:nth-child(even){
+    z-index: 1;
+    position: relative;
+    bottom: 25px;
+    text-align: center;
+    color: var(--white);
+}
+
+figure figcaption:nth-child(odd){
+    z-index: 1;
+    position: relative;
+    bottom: 25px;
+    text-align: center;
+    color: var(--blue);
+}
+
+li #top{
+    position: absolute;
+    color: var(--white);
+    right: 5px;
+    top: 5485px;
+    outline: solid .5px var(--white);
+}
+
+#contact{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#contact p{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+input, select, textarea{
+	display: block;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+label{
+	font-weight: bold;
+    margin-right: 200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input, select, textarea{
+	padding: 10px;
+}
+
+input{
+    width: 250px;
+}
+
+::placeholder{
+    color: var(--blue);
+    font-weight: bold;
+}
+
+#my-submit{
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 15px;
+    position: relative;
+    top: 25px;
+}
+
+#my-submit:hover{
+    color:var(--blue);
+    background-color: var(--white);
+}
+
+input:focus{
+    outline: 1px solid var(--blue);
+}
+
+footer{
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+    padding-top: 25px;
+}
+
+@media screen and (min-width: 485px){          /*media query (small)*/
+
+    p{
+        padding-bottom: 15px;
+    }
+}   
+
+
+@media screen and (min-width: 880px) { /*media query (med)*/
+    h1{
+        text-align: left;
+        color: black;
+    }
+
+    #gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h2, p{
+        grid-column: 1/ span 2;
+        padding-top: 10px;
+    }
+
+    p{
+        padding-bottom: 10px;
+        justify-content: left;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    input{
+        width: 50%;
+    }
+
+    label{
+        margin-right: 400px;
+    }
+
+    li #top{
+        top: 3400px;
+    }
+
+}
+
+@media screen and (min-width: 1300px){
+    h1{
+        color: orange;
+        text-align: left;
+    }
+
+    header{
+        border: solid 100px var(--black);
+        border-top: none;
+        height: 2px;
+    }
+
+    nav ul{
+        float: right;
+    }
+
+    main{
+        border: solid 100px var(--black);
+    }
+
+    #gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #about h2{
+        clear: both;
+    }
+
+    h2, p{
+        grid-column: 1/ span 3;
+        padding-top: 10px;
+    }
+
+    label{
+        margin-right: 800px;
+    }
+
+    li #top{
+        top: 2520px;
+    }
+
+
+}
