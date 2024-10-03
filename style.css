@@ -60,6 +60,7 @@ html{
     font-family: var(--font-family);
     border: solid var(--white) 10px;
     background-color: var(--black);
+    min-width: 485px ;
 }
 
 header{
@@ -70,6 +71,11 @@ header{
 p{
     font-size: 1.25em;
 }
+
+#gallery p{
+    padding-bottom: 50px;
+}
+
 
 figcaption, label, input, small{
     font-size: 1em;
@@ -194,8 +200,14 @@ li #top{
     position: absolute;
     color: var(--white);
     right: 5px;
-    top: 5485px;
+    top: 5550px;
+    padding: 10px;
     outline: solid .5px var(--white);
+}
+
+#top:hover{
+    background-color: var(--white);
+    color: var(--black);
 }
 
 #contact{
@@ -265,18 +277,20 @@ footer{
     padding-top: 25px;
 }
 
-@media screen and (min-width: 485px){          /*media query (small)*/
-
-    p{
-        padding-bottom: 15px;
-    }
-}   
 
 
-@media screen and (min-width: 880px) { /*media query (med)*/
+@media screen and (min-width: 880px) {          /*media query (med)*/
     h1{
         text-align: left;
-        color: black;
+    }
+
+    header{
+        border: solid 35px var(--black);
+        border-top: none;
+    }
+
+    main{
+        border: solid 35px var(--black);
     }
 
     #gallery{
@@ -287,11 +301,6 @@ footer{
     h2, p{
         grid-column: 1/ span 2;
         padding-top: 10px;
-    }
-
-    p{
-        padding-bottom: 10px;
-        justify-content: left;
     }
 
     form{
@@ -309,14 +318,18 @@ footer{
     }
 
     li #top{
-        top: 3400px;
+        top: 3420px;
     }
 
 }
 
-@media screen and (min-width: 1300px){
+@media screen and (min-width: 1300px){          /*media query (lrg)*/          
+
+    html{
+        min-width: 1300px;
+    }
+
     h1{
-        color: orange;
         text-align: left;
     }
 
