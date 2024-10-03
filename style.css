@@ -142,21 +142,53 @@ p{
 }
 
 
-figure figcaption:nth-child(even){
+figure:nth-child(odd) figcaption{
     z-index: 1;
     position: relative;
     bottom: 25px;
     text-align: center;
     color: var(--white);
+    font-weight: bold;
 }
 
-figure figcaption:nth-child(odd){
+figure:nth-child(even) figcaption{
     z-index: 1;
     position: relative;
-    bottom: 25px;
+    bottom: 275px;
     text-align: center;
-    color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
 }
+
+figure:nth-child(6) figcaption{
+    color: var(--black);
+    bottom: 620px;
+}
+
+figure:nth-child(7) figcaption{
+    color: var(--black);
+    bottom: 600px;
+}
+
+figure:nth-child(8) figcaption{
+    color: var(--black);
+    bottom: 35px;
+}
+
+figure:nth-child(11) figcaption{
+    color:var(--black);
+    bottom: 270px;
+}
+
+figure:nth-child(12) figcaption{
+    color: var(--black);
+}
+
+figure:nth-child(13) figcaption{
+    color: var(--black);
+    bottom: 270px;
+}
+
 
 li #top{
     position: absolute;
